@@ -2,14 +2,12 @@
 \chapter*{Abstract}
 \addcontentsline{toc}{chapter}{Abstract}
 
-\noindent During a 38-month software engineering apprenticeship at SAS Everbloo (October 2023 to November 2026), I worked on the architecture, performance, and full-stack development of \textbf{Metis}. Metis is a B2B airline booking engine and Self-Booking Tool (SBT) used by travel agency networks (such as TourCom) and corporate clients. Across four monorepo repositories (\texttt{api-aerial}, \texttt{front-reservation}, \texttt{front-dashboard}, and \texttt{api-dashboard}), I authored 1,554 commits. The main technical challenge was integrating two fundamentally different technologies: legacy Global Distribution Systems (Sabre, Amadeus), which rely on stateful EDIFACT sessions, and modern IATA NDC APIs, which use stateless web requests with short-lived offers. This thesis addresses the central question: how can we ensure transactional and pricing consistency in a booking engine combining hybrid protocols (GDS and NDC)?
+\noindent I worked for 38 months at SAS Everbloo on \textbf{Metis}, a B2B flight booking platform. Most of my code is in \texttt{api-aerial} and \texttt{front-reservation}. The recurring difficulty was mixing Sabre/Amadeus session-based flows with short-lived NDC offers in one checkout.
 
-\noindent To solve these issues in production, I implemented a modular architecture combining a Node.js/Express backend (Sequelize ORM) with Nuxt~3 / Vue~3 TypeScript frontends. I built an adapter layer (\texttt{SabreAdapter.ts}) to normalize carrier payloads into a common domain model, and an Axios interceptor for background OAuth2 token renewal without user interruption. I also designed a matching algorithm (\texttt{matchesPaxRefId}) to eliminate IATA booking rejets on edge cases such as lap infants and accented names. When prices change right before checkout, an interactive confirmation dialog prevents booking abandonment, and an ISO 4217 multi-currency pipeline eliminates rounding discrepancies and airline debit memos (ADMs).
-
-\noindent Tested under real production traffic across nearly one hundred agencies, these solutions reduced application-level NDC order creation failures below 0.1\% across our production logs (excluding carrier-side outages), decreased average search latency to 3.0\,s during load test benchmarks, and incurred zero debit memos (ADMs) over two years of live operations. Above all, this apprenticeship showed me the real-world impact of theoretical software design: handling timezone shifts, database deadlocks during traffic spikes, and managing Monday morning production incidents. It marked my transition from fixing isolated tickets to designing and maintaining a business-critical system.
+\noindent I spent time on offer mapping, OAuth2 refresh, NDC order creation (passenger names, lap infants), price changes before ticketing, and multi-currency totals. Chapters below describe the code, the measurements we kept, and a few production incidents.
 
 \vspace{0.6cm}
 \noindent \textbf{\large Keywords:}\\
-\noindent Airline Distribution, GDS (Sabre, Amadeus), IATA NDC, Nuxt 3, Vue 3, TypeScript, Node.js, Express, Transactional Consistency, Reshopping, OAuth2, ISO 4217, Passive Segments, Automated Testing.
+\noindent GDS, NDC, TypeScript, Node.js, OAuth2, ISO 4217, ADM.
 
 \selectlanguage{french}

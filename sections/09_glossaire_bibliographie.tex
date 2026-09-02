@@ -1,8 +1,8 @@
-\chapter*{Glossaire des Termes Métier, Concepts Techniques}
-\addcontentsline{toc}{chapter}{Glossaire des Termes Métier, Concepts Techniques}
+\chapter*{Glossaire}
+\addcontentsline{toc}{chapter}{Glossaire}
 
 \vspace{0.2cm}
-Ce glossaire explicite les notions fondamentales de génie logiciel et de distribution aérienne mobilisées dans le cadre de ce mémoire.
+Notions propres à la distribution aérienne et au moteur Metis.
 
 \vspace{0.4cm}
 {\small
@@ -11,63 +11,59 @@ Ce glossaire explicite les notions fondamentales de génie logiciel et de distri
 \begin{longtable}{>{\columncolor{CobaltBlue!5}\bfseries\color{NavyBlue}}p{3.2cm} p{11.6cm}}
 \hline
 \rowcolor{CobaltBlue!12}
-\textbf{\color{NavyBlue}Concept / Terme} & \textbf{\color{NavyBlue}Définition et Contexte Métier} \\
+\textbf{\color{NavyBlue}Terme} & \textbf{\color{NavyBlue}Définition} \\
 \hline
 \endfirsthead
 
 \hline
 \rowcolor{CobaltBlue!12}
-\textbf{\color{NavyBlue}Concept / Terme} & \textbf{\color{NavyBlue}Définition et Contexte Métier (suite)} \\
+\textbf{\color{NavyBlue}Terme} & \textbf{\color{NavyBlue}Définition (suite)} \\
 \hline
 \endhead
 
 \hline
 \endfoot
 
-Ancillaries & Prestations de voyage vendues en option (bagages en soute, sièges spécifiques, repas spéciaux, embarquement prioritaire). \\
-Canonical Data Model & Patron d'architecture définissant un modèle de données pivot unique pour normaliser des flux hétérogènes. \\
-Debit Memo (ADM) & Pénalité financière émise par une compagnie aérienne à l'encontre d'une agence pour non-respect des règles tarifaires. \\
-Adapter Pattern & Patron de conception structurel adaptant une interface incompatible vers une interface cible unifiée. \\
-Event Loop & Mécanisme asynchrone non-bloquant au cœur de Node.js traitant les entrées/sorties sur un thread unique. \\
-IATA ONE Order & Standard d'aviation unifiant la commande, la billetterie et les services annexes sous un enregistrement unique. \\
-PaxRefID & Identifiant unique normalisé d'un passager dans un message NDC pour lier voyageur, billet et services. \\
-Pinia Store & Gestionnaire d'état réactif officiel pour Vue 3 offrant le typage strict TypeScript et la modularité. \\
-PCC / Office ID & Identifiant marchand attribué par un GDS formalisant les droits d'émission d'un point de vente. \\
-Reshopping & Re-tarification en temps réel avant le paiement pour valider le tarif et actualiser le panier sans rupture. \\
-Segment Passif & Ligne de vol d'information inscrite dans un GDS pour intégration comptable sans réservation d'inventaire. \\
-SBT & Outil d'auto-réservation en ligne dédié aux collaborateurs pour leurs voyages d'affaires en entreprise. \\
-Sequelize ORM & Outil de mapping objet-relationnel facilitant les requêtes SQL et transactions en Node.js. \\
+Ancillaries & Options vendues avec le billet (bagage soute, siège, repas, embarquement prioritaire). \\
+Branded Fare & Offre tarifaire groupant un tarif de base et des services non dissociables (bagage inclus sur un tronçon, conditions d'annulation, etc.). \\
+Debit Memo (ADM) & Pénalité financière transporteur $\rightarrow$ agence pour non-respect des règles tarifaires ou d'écriture. \\
+Office ID & Identifiant marchand Amadeus d'un point de vente. \\
+PaxRefID & Identifiant passager dans un message NDC, utilisé pour lier voyageur, billet et services. \\
+Reshopping / Reprice & Re-tarification avant émission pour valider le prix courant et, le cas échéant, obtenir un nouvel \texttt{OfferID}. \\
+Segment passif & Ligne de vol informative inscrite dans un GDS pour la comptabilité, sans prise d'inventaire. \\
+Taxe IZ & Taxe de solidarité (dite « taxe Chirac ») figurant dans la ventilation des taxes aéroportuaires françaises. \\
 \end{longtable}
 }
 
 \vspace{1cm}
 
-\chapter*{Bibliographie Académique, Références Techniques}
-\addcontentsline{toc}{chapter}{Bibliographie Académique, Références Techniques}
+\chapter*{Bibliographie}
+\addcontentsline{toc}{chapter}{Bibliographie}
 
-\section*{Ouvrages de Référence en Génie Logiciel, Architecture Distribuée}
+\section*{Standards et spécifications}
 \begin{enumerate}[label={[\arabic*]},leftmargin=*,itemsep=5pt]
-    \item \textbf{Gamma, E., Helm, R., Johnson, R., \& Vlissides, J.} (1994). \textit{Design Patterns: Elements of Reusable Object-Oriented Software}. Addison-Wesley Professional.
-    \item \textbf{Fowler, M.} (2002). \textit{Patterns of Enterprise Application Architecture}. Addison-Wesley Longman.
-    \item \textbf{Martin, R. C.} (2017). \textit{Clean Architecture: A Craftsman's Guide to Software Structure and Design}. Prentice Hall.
-    \item \textbf{Newman, S.} (2021). \textit{Building Microservices: Designing Fine-Grained Systems} (2nd ed.). O'Reilly Media.
-    \item \textbf{Kleppmann, M.} (2017). \textit{Designing Data-Intensive Applications: The Big Ideas Behind Reliable, Scalable, and Maintainable Systems}. O'Reilly Media.
-    \item \textbf{Evans, E.} (2003). \textit{Domain-Driven Design: Tackling Complexity in the Heart of Software}. Addison-Wesley Professional.
+    \item \textbf{Hardt, D.} (ed.) (2012). \textit{The OAuth 2.0 Authorization Framework}. RFC~6749. IETF. Sections 1.5 (Refresh Token) et 10 (Security Considerations). \url{https://datatracker.ietf.org/doc/html/rfc6749}
+    \item \textbf{Jones, M., Bradley, J., \& Sakimura, N.} (2015). \textit{JSON Web Token (JWT)}. RFC~7519. IETF. \url{https://datatracker.ietf.org/doc/html/rfc7519}
+    \item \textbf{International Organization for Standardization.} (2015). \textit{ISO 4217:2015 --- Codes for the representation of currencies and funds}. ISO, Geneva. (précision décimale par devise).
+    \item \textbf{International Air Transport Association (IATA).} (2021). \textit{NDC Implementation Guide}, version 21.3. Messages \texttt{AirShoppingRQ/RS}, \texttt{OfferPriceRQ/RS}, \texttt{OrderCreateRQ/RS} ; éléments \texttt{Pax}, \texttt{PaxRefID}, \texttt{OrderItem}. IATA Publications, Montreal--Geneva. Guide payant, pas d'URL publique stable.
+    \item \textbf{International Air Transport Association (IATA).} (2023). \textit{ONE Order} --- architecture et spécifications techniques. IATA Future Airline Distribution, Geneva.
+    \item \textbf{Sabre Corporation.} (2024). \textit{Sabre APIs Developer Reference} (SOAP / REST). Sabre Dev Studio, Southlake, Texas. Endpoints Session / Token Create et Command (cryptique).
+    \item \textbf{Amadeus IT Group.} (2023). \textit{Amadeus Web Services Integration Guide} --- Passive Segments \& PNR Management. Madrid.
 \end{enumerate}
 
-\section*{Standards Industriels, Spécifications Aéronautiques}
-\begin{enumerate}[label={[IATA-\arabic*]},leftmargin=*,itemsep=5pt]
-    \item \textbf{International Air Transport Association (IATA).} (2021). \textit{New Distribution Capability (NDC) Implementation Guide - Version 21.3}. IATA Publications, Montreal-Geneva.
-    \item \textbf{International Air Transport Association (IATA).} (2023). \textit{ONE Order Standard Architecture \& Technical Specifications}. IATA Future Airline Distribution, Geneva.
-    \item \textbf{Sabre Corporation.} (2024). \textit{Sabre APIs Developer Reference: SOAP and REST Web Services Integration Manual}. Sabre Dev Studio, Southlake, Texas.
-    \item \textbf{Amadeus IT Group.} (2023). \textit{Amadeus Web Services Integration Guide: Passive Segments \& PNR Management}. Amadeus Global Documentation, Madrid.
-    \item \textbf{International Organization for Standardization.} (2015). \textit{ISO 4217:2015 - Codes for the representation of currencies and funds}. ISO, Geneva.
+\section*{Documentation d'exécution et retours d'expérience}
+\begin{enumerate}[label={[T-\arabic*]},leftmargin=*,itemsep=5pt]
+    \item \textbf{Sequelize.} \textit{Transactions} (niveaux d'isolation, verrous). Documentation v6. \url{https://sequelize.org/docs/v6/other-topics/transactions/} (consulté en 2026).
+    \item \textbf{Sequelize.} Issue \#8294 --- \textit{How to correctly retry transactions} (deadlocks MySQL, \texttt{retry.match: [/Deadlock/i]}). Issue fermée, fil conservé. \url{https://github.com/sequelize/sequelize/issues/8294}
+    \item \textbf{Loon, T.} (2021). \textit{How to Handle Database Deadlock in Sequelize}. JavaScript in Plain English. \url{https://javascript.plainenglish.io/how-to-handle-database-deadlock-in-sequelize-6bee46e9ed99} (consulté en 2026 ; copie aussi sur \url{https://plainenglish.io/javascript/how-to-handle-database-deadlock-in-sequelize}).
+    \item \textbf{Oracle MySQL.} \textit{InnoDB Locking and Transaction Model} --- deadlocks et \texttt{SELECT ... FOR UPDATE}. MySQL 8.0 Reference Manual. \url{https://dev.mysql.com/doc/refman/8.0/en/innodb-locking.html}
+    \item \textbf{Axios.} Interceptors --- documentation officielle (file d'attente / retry sur 401). \url{https://axios-http.com/docs/interceptors}
+    \item \textbf{date-fns.} \texttt{date-fns-tz} --- parsing de dates sans offset et association fuseau IANA. \url{https://github.com/marnusw/date-fns-tz}
+    \item \textbf{Vue.js / Pinia.} Documentation Composition API et stores typés. \url{https://pinia.vuejs.org/} ; \url{https://vuejs.org/guide/introduction.html}
+    \item \textbf{Nuxt.} Documentation Nuxt~3 (installation, routing). \url{https://nuxt.com/docs/3.x/getting-started/installation} (consulté en 2026).
 \end{enumerate}
 
-\section*{Documentations Officielles, Ressources Web}
-\begin{enumerate}[label={[WEB-\arabic*]},leftmargin=*,itemsep=5pt]
-    \item \textbf{Vue.js Core Team.} (2024). \textit{Vue.js 3 Documentation \& Composition API Guide}. Accessible en ligne : \url{https://vuejs.org/guide/introduction.html}.
-    \item \textbf{Nuxt Core Team.} (2024). \textit{Nuxt 3 Framework Documentation: Server-Side Rendering and Hybrid Rendering}. Accessible en ligne : \url{https://nuxt.com/docs}.
-    \item \textbf{OpenJS Foundation.} (2024). \textit{Node.js Design Patterns and Asynchronous Programming Reference (v18/v20 LTS)}. Accessible en ligne : \url{https://nodejs.org/docs}.
-    \item \textbf{Sequelize Team.} (2024). \textit{Sequelize ORM v6 API Documentation: Transactions, Migrations, and Associations}. Accessible en ligne : \url{https://sequelize.org}.
+\section*{Ouvrage de référence (patron Adaptateur)}
+\begin{enumerate}[label={[B-\arabic*]},leftmargin=*,itemsep=5pt]
+    \item \textbf{Gamma, E., Helm, R., Johnson, R., \& Vlissides, J.} (1994). \textit{Design Patterns}. Addison-Wesley. Chapitre «~Adapter~» --- utilisé pour cadrer \texttt{SabreAdapter.ts} / \texttt{CanonicalFlightOffer}.
 \end{enumerate}

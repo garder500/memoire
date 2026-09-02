@@ -2,7 +2,7 @@
 \addcontentsline{toc}{chapter}{Table des sigles et abréviations}
 
 \vspace{0.2cm}
-Ce tableau récapitule les principaux sigles, abréviations et termes techniques utilisés dans l'ingénierie de la plateforme Metis et l'écosystème de la distribution aérienne.
+Sigles métier et protocoles utilisés dans le mémoire. Les termes généraux de génie logiciel (API, JSON, REST, etc.) ne sont pas repris ici.
 
 \vspace{0.4cm}
 {\small
@@ -11,43 +11,32 @@ Ce tableau récapitule les principaux sigles, abréviations et termes techniques
 \begin{longtable}{>{\columncolor{CobaltBlue!5}\bfseries\color{NavyBlue}}p{2.6cm} p{12.2cm}}
 \hline
 \rowcolor{CobaltBlue!12}
-\textbf{\color{NavyBlue}Sigle / Terme} & \textbf{\color{NavyBlue}Définition et Contexte Métier} \\
+\textbf{\color{NavyBlue}Sigle / Terme} & \textbf{\color{NavyBlue}Définition métier} \\
 \hline
 \endfirsthead
 
 \hline
 \rowcolor{CobaltBlue!12}
-\textbf{\color{NavyBlue}Sigle / Terme} & \textbf{\color{NavyBlue}Définition et Contexte Métier (suite)} \\
+\textbf{\color{NavyBlue}Sigle / Terme} & \textbf{\color{NavyBlue}Définition métier (suite)} \\
 \hline
 \endhead
 
 \hline
 \endfoot
 
-API & \textit{Application Programming Interface} — Interface standardisée d'échange de données. \\
-B2B & \textit{Business to Business} — Flux commerciaux et logiciels entre entreprises. \\
-CI/CD & \textit{Continuous Integration / Deployment} — Pipeline d'automatisation des tests et livraisons. \\
-CSR & \textit{Client-Side Rendering} — Rendu dynamique exécuté dans le navigateur du client. \\
-DOM & \textit{Document Object Model} — Représentation objet de la page web. \\
-EDIFACT & \textit{Electronic Data Interchange for Administration, Commerce and Transport} — Standard d'échange des GDS historiques. \\
-EMD & \textit{Electronic Miscellaneous Document} — Titre électronique pour les services auxiliaires payants. \\
-GDS & \textit{Global Distribution System} — Réseau mondial centralisé de distribution (Sabre, Amadeus). \\
-IATA & \textit{International Air Transport Association} — Organisation régissant les normes de l'aviation civile. \\
-ISO 4217 & Standard international de codification et précision monétaire des devises. \\
-JSON & \textit{JavaScript Object Notation} — Format textuel léger d'échange de données. \\
-LCC & \textit{Low-Cost Carrier} — Compagnie aérienne à bas coûts. \\
-MVCS & \textit{Model-View-Controller-Service} — Patron d'architecture isolant le métier et la persistance. \\
-NDC & \textit{New Distribution Capability} — Standard IATA XML/JSON de distribution aérienne directe. \\
-OCN & \textit{Order Change Notification} — Notification asynchrone de modification de commande ou vol. \\
-ORM & \textit{Object-Relational Mapping} — Couche d'abstraction entre base SQL et code applicatif. \\
-PNR & \textit{Passenger Name Record} — Dossier passager informatique (identifiant à 6 caractères). \\
-POS & \textit{Point of Sale} — Point de vente définissant la localisation et les droits marchands. \\
-REST & \textit{Representational State Transfer} — Style d'architecture pour services web légers. \\
-SBT & \textit{Self-Booking Tool} — Outil de réservation en ligne pour les voyages d'affaires. \\
-SOA & \textit{Service-Oriented Architecture} — Architecture orientée services découplés. \\
-SOAP & \textit{Simple Object Access Protocol} — Protocole XML d'échanges de services web. \\
-SSR & \textit{Server-Side Rendering / Special Service Request} — Rendu serveur ou service spécial passager. \\
-UI / UX & \textit{User Interface / User Experience} — Conception et ergonomie de l'interface utilisateur. \\
-XML & \textit{Extensible Markup Language} — Langage de balisage structuré pour l'échange de documents. \\
+ADM & \textit{Agency Debit Memo} — Avis de débit émis par un transporteur à une agence (souvent pour écart tarifaire ou écriture passive incorrecte). \\
+EDIFACT & \textit{Electronic Data Interchange for Administration, Commerce and Transport} — Standard d'échange historique des GDS. \\
+EMD & \textit{Electronic Miscellaneous Document} — Titre électronique pour services auxiliaires payants (bagage, siège, etc.). \\
+GDS & \textit{Global Distribution System} — Réseau de distribution (Sabre, Amadeus). \\
+IATA & \textit{International Air Transport Association}. \\
+ISO 4217 & Codification et précision monétaire des devises. \\
+NDC & \textit{New Distribution Capability} — Standard IATA de distribution aérienne directe (XML/JSON). \\
+OCN & \textit{Order Change Notification} — Notification asynchrone de modification de commande ou de vol. \\
+PCC & \textit{Pseudo City Code} — Identifiant marchand Sabre d'un point de vente. \\
+PNR & \textit{Passenger Name Record} — Dossier passager (souvent 6 caractères). \\
+POS & \textit{Point of Sale} — Point de vente (droits, devise, contrats). \\
+SBT & \textit{Self-Booking Tool} — Outil de réservation pour voyages d'affaires. \\
+SOAP & \textit{Simple Object Access Protocol} — Enveloppes XML encore utilisées par certains connecteurs GDS. \\
+SSR & \textit{Special Service Request} — Demande de service spécial passager dans un PNR. \\
 \end{longtable}
 }

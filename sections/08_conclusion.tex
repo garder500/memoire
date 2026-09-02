@@ -1,30 +1,14 @@
-\chapter{Conclusion Générale et Perspectives}
+\chapter{Conclusion}
 \label{chap:conclusion}
 
-\section{Bilan du Projet et Enseignements}
+\section{Bilan}
 
-Ces 38 mois de travail sur \textbf{Metis} m'ont permis de mesurer le fossé qui sépare la théorie logicielle de la production réelle. Faire cohabiter les vieux protocoles des GDS (Sabre et Amadeus en sessions synchrones) avec les API web NDC a demandé des compromis permanents entre rapidité, sécurité financière et confort pour l'utilisateur.
+Les adaptateurs, l'intercepteur OAuth2, l'appairage des passagers et la retarification sont en production sur le parc d'agences que nous suivons. Cela ne clôt pas le sujet : \texttt{rawCarrierMetadata} reste un champ fourre-tout, la table d'exceptions ERP doit encore être tenue à jour à la main, et le parcours après un 409 sans nouvelle offre est toujours médiocre. J'ai aussi passé plus de temps que prévu sur trois incidents (taxe IZ, fuseaux Aegean/Turkish, deadlock InnoDB). Depuis, je prépare plus souvent une reproduction avant de modifier un contrôleur, et je pose la question au PO lorsqu'une règle métier est floue.
 
-Les choix techniques faits sur le projet ont permis d'apporter des réponses simples à des problèmes complexes :
-L'adaptateur canonique (\texttt{SabreAdapter.ts}) a permis de brancher de nouvelles compagnies comme British Airways, Aegean et Turkish sans modifier le code de nos composants de panier. L'intercepteur Axios avec file d'attente a réglé les déconnexions intempestives lors du renouvellement des jetons OAuth2. L'algorithme de réconciliation des passagers (\texttt{matchesPaxRefId}) a fait chuter le taux de rejet des réservations NDC sous les 0,1\,\%, et la fenêtre de confirmation tarifaire a permis de sauver 92\,\% des paniers touchés par une hausse de prix de dernière minute. Enfin, le découpage propre des segments passifs a évité le moindre avis de débit (ADM) sur plus de deux ans d'exploitation.
+\section{RNCP 36137}
 
-\section{Bilan des Compétences RNCP 36137}
+Pour le titre d'\textbf{Expert en Ingénierie Informatique}, ce projet m'a confronté à une architecture multi-services, au full-stack Node.js / Nuxt, aux contraintes ADM, aux tests automatisés et au travail avec une équipe répartie Paris / Tunisie. Je n'ai pas déroulé le référentiel point par point ; ce sont simplement les sujets que j'ai réellement traités.
 
-Cette alternance valide l'ensemble des compétences attendues pour le titre d'\textbf{Expert en Ingénierie Informatique} (Niveau 7 -- RNCP 36137) :
+\section{Perspectives}
 
-\begin{itemize}[leftmargin=*, itemsep=4pt]
-\item \textbf{Architecture logicielle et systèmes distribués :} Définition de contrats d'interface stricts en TypeScript, découpage modulaire des services et gestion de traitements asynchrones non-bloquants sous Node.js.
-\item \textbf{Développement full-stack et performance :} Maîtrise de Nuxt~3, Vue~3 et Pinia, avec une réduction de 28\,\% du temps de réponse moyen sur le moteur de recherche.
-\item \textbf{Qualité et rigueur financière :} Mise en place de tests unitaires et d'intégration (Mocha, Chai, Playwright) garantissant le respect de la norme ISO 4217 sur les devises et la validation des flux IATA.
-\item \textbf{Posture d'ingénieur et travail d'équipe :} Diagnostic d'incidents sous pression, collaboration quotidienne avec les Product Owners et mentorat technique auprès des développeurs de l'équipe en Tunisie.
-\end{itemize}
-
-\section{Perspectives d'Évolution}
-
-Pour la suite de la plateforme Metis, deux évolutions majeures se dessinent :
-
-D'abord, l'arrivée du standard \textbf{IATA ONE Order}, qui va regrouper le PNR, le billet et les options dans une commande unique. Grâce au modèle pivot que nous avons mis en place, cette évolution pourra se faire sans casser les interfaces de réservation existantes.
-
-Ensuite, le déploiement d'un traçage distribué avec \textbf{OpenTelemetry}, pour mesurer précisément les temps de réponse de chaque compagnie aérienne et repérer plus vite les ralentissements chez les transporteurs.
-
-Ces trois années chez Everbloo m'ont appris qu'un bon système logiciel ne se mesure pas au nombre de frameworks utilisés, mais à sa capacité à tourner sans accroc en production et à rendre service aux utilisateurs. C'est avec cette vision pragmatique que je poursuis mon parcours comme \textbf{Architecte Systèmes d'Information et Lead Developer}.
+Deux sujets que je suivrais en priorité : la veille \textbf{IATA ONE Order}, qui pourrait simplifier le modèle de commande, et un traçage \textbf{OpenTelemetry} des appels transporteurs, aujourd'hui surtout diagnostiqués via Winston et Sentry.

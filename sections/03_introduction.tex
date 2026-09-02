@@ -1,40 +1,14 @@
-\chapter{Introduction Générale et Cadrage Stratégique}
+\chapter{Introduction}
 \label{chap:introduction}
 
-\section{Contexte Sectoriel et Évolution de la Distribution Aérienne}
+\section{Contexte}
 
-Dans le secteur du voyage d'affaires (B2B), réserver et émettre un billet d'avion est une opération critique. Les plateformes de réservation doivent interroger des inventaires aériens mondiaux en quelques secondes, tout en garantissant des prix justes au centime près pour la comptabilité des agences.
+J'ai effectué mon alternance chez Everbloo d'octobre 2023 à novembre 2026, principalement sur Metis. La plateforme sert des réseaux d'agences --- TourCom en particulier --- et des comptes entreprises. Pour afficher une offre, elle interroge Sabre, Amadeus et plusieurs connecteurs NDC (Air France-KLM, British Airways, Lufthansa Group, selon les contrats du moment). Dans la pratique, ces sources ne se comportent pas de la même façon : Sabre et Amadeus s'appuient encore beaucoup sur des sessions avec état (EDIFACT, SOAP, parfois du cryptique), alors que NDC expose des API web dont les offres, identifiées par un \texttt{OfferID}, expirent au bout de quelques minutes. Les résultats se retrouvent pourtant dans le même panier, et c'est de là que viennent la plupart des problèmes de cohérence de prix et de dossiers passagers que j'ai eu à traiter.
 
-Pendant des décennies, cette distribution est passée exclusivement par les \textit{Global Distribution Systems} (GDS), principalement Sabre et Amadeus. Ces systèmes fonctionnent avec des protocoles anciens issus de la norme EDIFACT. Leur principe repose sur des sessions synchrones avec état : le serveur garde la main sur le dossier passager (\textit{Passenger Name Record} ou PNR), bloque les sièges temporairement, puis valide la réservation étape par étape jusqu'à l'émission du billet.
+\section{Problématique}
 
-Depuis quelques années, les compagnies aériennes déploient la norme \textbf{NDC} (\textit{New Distribution Capability}) de l'IATA. Bâtie sur des API web modernes (REST JSON et XML), la norme NDC permet aux transporteurs de vendre leurs vols en direct sans passer par les GDS. Les compagnies peuvent ainsi faire varier leurs tarifs en temps réel (\textit{dynamic pricing}) et vendre des options personnalisées (\textit{ancillaries} : bagages, choix du siège, coupe-file).
+Le tarif vu à la recherche n'est pas toujours celui qui reste disponible à l'émission. Les noms doivent passer les contrôles IATA ; un bébé sans siège doit être rattaché à un adulte ; les devises suivent ISO 4217 ; une écriture passive incorrecte dans le GDS de l'agence peut déclencher un ADM. La question posée en page de garde recouvre ce périmètre. Côté implémentation, l'essentiel tourne autour d'une API Node.js (Sequelize) et d'interfaces Nuxt~3 / Vue~3 en TypeScript.
 
-Pour la plateforme \textbf{Metis} --- développée par Everbloo pour équiper des réseaux d'agences comme TourCom et des entreprises ---, cette transition pose un vrai défi technique. Notre application doit faire cohabiter deux mondes : d'un côté, les flux GDS traditionnels en commandes cryptiques ou SOAP avec verrouillage de places ; de l'autre, les flux NDC directs (Air France-KLM, British Airways, Lufthansa Group), qui fonctionnent par requêtes web sans état avec des offres temporaires valables seulement quelques minutes.
+\section{Organisation}
 
-\section{Énonciation de la Problématique d'Ingénierie}
-
-Dans la pratique quotidienne de Metis Connect, un utilisateur cherche un vol, sélectionne ses options, remplit les noms des voyageurs et passe au paiement. Entre le moment où il voit le prix et le moment où il valide son panier, les serveurs des compagnies peuvent fermer une classe tarifaire ou modifier le montant des taxes d'aéroport.
-
-Face à ces changements de dernière minute, le moteur de réservation ne peut pas débiter un montant différent sans prévenir le client, mais il ne doit pas non plus annuler brutalement la commande en effaçant toutes les informations déjà saisies. S'ajoutent à cela les conversions de devises (norme ISO 4217) et les règles de saisie IATA sur les noms et les bébés sans siège, dont le non-respect bloque immédiatement l'émission du billet.
-
-La problématique centrale de mes travaux d'ingénierie s'énonce ainsi :
-
-\vspace{0.4cm}
-\begin{quote}
-\centering
-\large\itshape\color{NavyBlue}
-«~Comment garantir la cohérence transactionnelle et tarifaire d'un moteur de réservation aérien agrégeant des protocoles hybrides (GDS et NDC) ?~»
-\end{quote}
-\vspace{0.4cm}
-
-Pour résoudre cette équation en production, j'ai conçu une architecture modulaire associant une API backend Node.js (avec Sequelize) et des interfaces Nuxt~3 / Vue~3 en TypeScript.
-
-\section{Organisation du Mémoire}
-
-Le mémoire est organisé en trois grandes parties :
-
-La \textbf{première partie} présente l'entreprise Everbloo, l'organisation de l'équipe et le socle technique de Metis, avant de détailler les quatre hypothèses de conception retenues pour le projet.
-
-La \textbf{deuxième partie} détaille les développements réalisés pour résoudre la problématique : adaptateurs canoniques, moteur de recherche graphique, terminal cryptique pour les billettistes, retarification interactive (\textit{reshopping}), réconciliation des passagers, gestion multi-devises et suite de tests automatisés.
-
-La \textbf{troisième partie} dresse le bilan des résultats obtenus. J'y analyse trois incidents concrets rencontrés en production et j'explique comment ces 38 mois d'alternance ont forgé ma façon de travailler, de gérer la pression en production et de concevoir des systèmes fiables. Le document se termine par un bilan de compétences et les perspectives d'évolution de la distribution aérienne.
+Le document présente d'abord l'entreprise et la stack, puis les réalisations, les limites observées en production et le lien avec le RNCP. L'ordre n'est pas strictement chronologique.

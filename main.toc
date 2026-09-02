@@ -5,74 +5,68 @@
 \babel@toc {english}{}\relax 
 \contentsline {chapter}{Abstract}{iii}{chapter*.3}%
 \babel@toc {french}{}\relax 
-\contentsline {chapter}{\numberline {1}Introduction Générale et Cadrage Stratégique}{1}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Contexte Sectoriel et Évolution de la Distribution Aérienne}{1}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Énonciation de la Problématique d'Ingénierie}{1}{section.1.2}%
-\contentsline {section}{\numberline {1.3}Organisation du Mémoire}{2}{section.1.3}%
-\contentsline {part}{I\hspace {1em}Contexte Professionnel et Écosystème Métier}{3}{part.1}%
-\contentsline {chapter}{\numberline {2}Présentation de l'Entreprise et Rôle dans l'Équipe}{4}{chapter.2}%
-\contentsline {section}{\numberline {2.1}L'Entreprise d'Accueil : Everbloo}{4}{section.2.1}%
-\contentsline {section}{\numberline {2.2}La Plateforme Metis et son Écosystème}{4}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Organisation de l'Équipe et Quotidien de Développement}{5}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Mon Rôle et Mon Périmètre d'Intervention}{5}{subsection.2.3.1}%
-\contentsline {chapter}{\numberline {3}Environnement Technologique et Architecture de la Plateforme Metis}{6}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Stack Technologique et Environnement de Développement}{6}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Architecture Modulaire et Découpage des Services}{6}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Transition vers la Problématique}{7}{section.3.3}%
-\contentsline {chapter}{\numberline {4}Formulation et Contextualisation de la Problématique Centrale}{8}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Énonciation du Défi d'Ingénierie}{8}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Formulation et Articulation des Hypothèses de Conception}{8}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Hypothèse 1 : Abstraction Canonique via le Patron Adaptateur}{8}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Hypothèse 2 : Réconciliation Déterministe des Passagers et Pipeline Multi-Devises}{9}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Hypothèse 3 : Moteur Réactif de Retarification avec Validation Interactive}{9}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}Hypothèse 4 : Découplage des Points de Vente et Maîtrise des Segments Passifs}{9}{subsection.4.2.4}%
-\contentsline {part}{II\hspace {1em}Réalisations Techniques, Résolution de la Problématique}{11}{part.2}%
-\contentsline {chapter}{\numberline {5}Intégration Hybride des Protocoles GDS et IATA NDC}{12}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Expérience Utilisateur et Moteur de Recherche Metis Connect}{12}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Couche d'Abstraction Canonique via le Patron Adaptateur}{12}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Terminal et Commandes Cryptiques pour Billettistes}{15}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Gestion Découplée des Segments Passifs Amadeus et Sabre}{15}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Synchronisation des Dossiers Voyageurs (PNR)}{16}{section.5.5}%
-\contentsline {chapter}{\numberline {6}Cycle Transactionnel de Réservation et Retarification Temps Réel}{17}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Détection et Gestion des Écarts Tarifaires (Reshopping)}{17}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Algorithme Déterministe de Réconciliation des Passagers}{18}{section.6.2}%
-\contentsline {chapter}{\numberline {7}Optimisation du Moteur de Recherche et Filtrage Multi-Compagnies}{21}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Composant de Filtrage et Persistance des Préférences}{21}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Optimisation des Requêtes de Recherche Serveur}{21}{section.7.2}%
-\contentsline {chapter}{\numberline {8}Architecture Financière et Traitement Asynchrone Multi-Devises}{22}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Résolution Asynchrone de la Devise Point de Vente}{22}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Formatage Dynamique et Norme ISO 4217}{22}{section.8.2}%
-\contentsline {chapter}{\numberline {9}Back-Office d'Administration et Gouvernance des Agences}{23}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Interface de Paramétrage des Points de Vente}{23}{section.9.1}%
-\contentsline {section}{\numberline {9.2}Synchronisation par Lots des Profils Voyageurs Sabre}{23}{section.9.2}%
-\contentsline {chapter}{\numberline {10}Tests Automatisés et Résultats en Production}{24}{chapter.10}%
-\contentsline {section}{\numberline {10.1}Suite de Tests Unitaires et d'Intégration}{24}{section.10.1}%
-\contentsline {section}{\numberline {10.2}Résultats Mesurés en Production}{24}{section.10.2}%
-\contentsline {part}{III\hspace {1em}Bilan, Analyse Critique et Retours d'Expérience}{25}{part.3}%
-\contentsline {chapter}{\numberline {11}Bilan Technique et Analyse Critique des Hypothèses}{26}{chapter.11}%
-\contentsline {section}{\numberline {11.1}Bilan Global de la Démarche d'Ingénierie}{26}{section.11.1}%
-\contentsline {section}{\numberline {11.2}Remise en Question et Limites Réelles des Quatre Hypothèses}{26}{section.11.2}%
-\contentsline {subsection}{\numberline {11.2.1}1. Limites de l'Hypothèse 1 (L'Adaptateur Canonique et le Modèle Pivot)}{26}{subsection.11.2.1}%
-\contentsline {subsection}{\numberline {11.2.2}2. Limites de l'Hypothèse 2 (L'Appairage Déterministe des Passagers)}{27}{subsection.11.2.2}%
-\contentsline {subsection}{\numberline {11.2.3}3. Limites de l'Hypothèse 3 (La Retarification Interactive et le Statut 409)}{27}{subsection.11.2.3}%
-\contentsline {subsection}{\numberline {11.2.4}4. Limites de l'Hypothèse 4 (Les Segments Passifs et la Réalité des ERP)}{27}{subsection.11.2.4}%
-\contentsline {chapter}{\numberline {12}Analyse Critique, Galères de Production et Défis Techniques Réels}{29}{chapter.12}%
-\contentsline {section}{\numberline {12.1}Gestion du Cycle de Vie OAuth2 et File d'Attente de Requêtes}{29}{section.12.1}%
-\contentsline {section}{\numberline {12.2}Retour d'Expérience sur Trois Incidents Majeurs de Production}{31}{section.12.2}%
-\contentsline {subsection}{\numberline {12.2.1}1. L'Écart de Centime sur la Taxe de Solidarité (Taxe Chirac)}{31}{subsection.12.2.1}%
-\contentsline {subsection}{\numberline {12.2.2}2. Les Timestamps sans Fuseau Horaire chez Aegean et Turkish Airlines}{32}{subsection.12.2.2}%
-\contentsline {subsection}{\numberline {12.2.3}3. Interblocage (Deadlock SQL) sous Sequelize lors de Réservations Simultanées}{32}{subsection.12.2.3}%
-\contentsline {section}{\numberline {12.3}Dette Technique et Choix d'Architectures Alternatives}{32}{section.12.3}%
-\contentsline {chapter}{\numberline {13}Maturation Humaine, Posture Professionnelle et Réalités du Terrain}{33}{chapter.13}%
-\contentsline {section}{\numberline {13.1}Évolution Méthodologique et Trajectoire d'Autonomie Technique}{33}{section.13.1}%
-\contentsline {section}{\numberline {13.2}Mentorat, Partage de Connaissances et Collaboration Interculturelle}{33}{section.13.2}%
-\contentsline {section}{\numberline {13.3}Rétrospective sur les Échecs Initiaux et Erreurs d'Estimation}{34}{section.13.3}%
-\contentsline {section}{\numberline {13.4}Responsabilité Morale, Juridique et Impact Financier en Billetterie B2B}{34}{section.13.4}%
-\contentsline {section}{\numberline {13.5}Bilan Personnel et Évolution de ma Posture}{35}{section.13.5}%
-\contentsline {chapter}{\numberline {14}Conclusion Générale et Perspectives}{36}{chapter.14}%
-\contentsline {section}{\numberline {14.1}Bilan du Projet et Enseignements}{36}{section.14.1}%
-\contentsline {section}{\numberline {14.2}Bilan des Compétences RNCP 36137}{36}{section.14.2}%
-\contentsline {section}{\numberline {14.3}Perspectives d'Évolution}{36}{section.14.3}%
-\contentsline {chapter}{Table des sigles et abréviations}{38}{chapter*.7}%
-\contentsline {chapter}{Glossaire des Termes Métier, Concepts Techniques}{40}{chapter*.8}%
-\contentsline {chapter}{Bibliographie Académique, Références Techniques}{41}{chapter*.9}%
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Contexte}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Problématique}{1}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Organisation}{1}{section.1.3}%
+\contentsline {part}{I\hspace {1em}Contexte et environnement}{2}{part.1}%
+\contentsline {chapter}{\numberline {2}Everbloo et mon rôle dans l'équipe}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}L'entreprise d'accueil}{3}{section.2.1}%
+\contentsline {section}{\numberline {2.2}La plateforme Metis}{3}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Organisation de l'équipe}{3}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Mon rôle}{3}{subsection.2.3.1}%
+\contentsline {chapter}{\numberline {3}Stack et architecture Metis}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Stack et environnement de développement}{5}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Découpage des services}{5}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Passage à la problématique}{6}{section.3.3}%
+\contentsline {chapter}{\numberline {4}Problématique technique}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Écarts GDS / NDC dans le panier}{7}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Choix de conception}{7}{section.4.2}%
+\contentsline {part}{II\hspace {1em}Réalisations}{8}{part.2}%
+\contentsline {chapter}{\numberline {5}GDS et NDC dans le même moteur}{9}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Interface de recherche Metis Connect}{9}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Normalisation des offres via adaptateurs}{9}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Terminal cryptique pour billettistes}{12}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Segments passifs Amadeus et Sabre}{12}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Synchronisation des PNR}{13}{section.5.5}%
+\contentsline {chapter}{\numberline {6}Réservation, checkout et retarification}{14}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Écarts tarifaires (reshopping)}{14}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Appairage des passagers avant OrderCreate}{15}{section.6.2}%
+\contentsline {chapter}{\numberline {7}Filtrage multi-compagnies et perfs recherche}{18}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Filtres compagnies et préférences}{18}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Optimisation des requêtes de recherche}{18}{section.7.2}%
+\contentsline {chapter}{\numberline {8}Multi-devises et calculs tarifaires}{19}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Devise du point de vente}{19}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Formatage et norme ISO 4217}{19}{section.8.2}%
+\contentsline {chapter}{\numberline {9}Back-Office et paramétrage des agences}{20}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Paramétrage des points de vente}{20}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Import par lots des profils Sabre}{20}{section.9.2}%
+\contentsline {chapter}{\numberline {10}Tests et mesures en production}{21}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Tests unitaires et d'intégration}{21}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Mesures en production}{21}{section.10.2}%
+\contentsline {part}{III\hspace {1em}Bilan et retours d'expérience}{22}{part.3}%
+\contentsline {chapter}{\numberline {11}Limites observées en production}{23}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Bilan après 38 mois}{23}{section.11.1}%
+\contentsline {section}{\numberline {11.2}Compromis forcés en production}{23}{section.11.2}%
+\contentsline {subsection}{\numberline {11.2.1}Homonymes}{23}{subsection.11.2.1}%
+\contentsline {subsection}{\numberline {11.2.2}Segments passifs vs ERP agences}{23}{subsection.11.2.2}%
+\contentsline {subsection}{\numberline {11.2.3}\texttt {CanonicalFlightOffer} et les Branded Fares}{23}{subsection.11.2.3}%
+\contentsline {subsection}{\numberline {11.2.4}Le 409 ne sauve pas tous les paniers}{24}{subsection.11.2.4}%
+\contentsline {chapter}{\numberline {12}Incidents de production et choix d'architecture}{25}{chapter.12}%
+\contentsline {section}{\numberline {12.1}OAuth2 : refresh silencieux et file d'attente}{25}{section.12.1}%
+\contentsline {section}{\numberline {12.2}Incidents rencontrés en production}{26}{section.12.2}%
+\contentsline {subsection}{\numberline {12.2.1}Écart de centime sur la taxe IZ (taxe Chirac)}{26}{subsection.12.2.1}%
+\contentsline {subsection}{\numberline {12.2.2}Horaires Aegean / Turkish décalés de deux heures}{27}{subsection.12.2.2}%
+\contentsline {subsection}{\numberline {12.2.3}Deadlock InnoDB sous Sequelize}{27}{subsection.12.2.3}%
+\contentsline {chapter}{\numberline {13}Travail en équipe et responsabilités en production}{29}{chapter.13}%
+\contentsline {section}{\numberline {13.1}Organisation du développement}{29}{section.13.1}%
+\contentsline {section}{\numberline {13.2}Collaboration Paris / Tunisie}{29}{section.13.2}%
+\contentsline {section}{\numberline {13.3}Estimations}{29}{section.13.3}%
+\contentsline {section}{\numberline {13.4}Incidents côté agences}{29}{section.13.4}%
+\contentsline {chapter}{\numberline {14}Conclusion}{30}{chapter.14}%
+\contentsline {section}{\numberline {14.1}Bilan}{30}{section.14.1}%
+\contentsline {section}{\numberline {14.2}RNCP 36137}{30}{section.14.2}%
+\contentsline {section}{\numberline {14.3}Perspectives}{30}{section.14.3}%
+\contentsline {chapter}{Table des sigles et abréviations}{31}{chapter*.7}%
+\contentsline {chapter}{Glossaire}{32}{chapter*.8}%
+\contentsline {chapter}{Bibliographie}{33}{chapter*.9}%

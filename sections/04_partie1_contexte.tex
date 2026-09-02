@@ -1,52 +1,42 @@
-\part{Contexte Professionnel et Écosystème Métier}
+\part{Contexte et environnement}
 \label{part:contexte}
 
-\chapter{Présentation de l'Entreprise et Rôle dans l'Équipe}
+\chapter{Everbloo et mon rôle dans l'équipe}
 \label{chap:entreprise_role}
 
-\section{L'Entreprise d'Accueil : Everbloo}
+\section{L'entreprise d'accueil}
 
-J'ai effectué mes 38 mois d'alternance au sein de la société \textbf{Everbloo}, une entreprise d'ingénierie logicielle fondée et dirigée par \textbf{Reouven SAMAMA} (CEO et Tech Lead), située dans le 11\textsuperscript{e} arrondissement de Paris. Everbloo conçoit et exploite des plateformes web sur mesure pour les professionnels du tourisme et du voyage d'affaires (\textit{TravelTech}).
+Everbloo est l'entreprise où j'ai passé mon alternance (38 mois). Elle est dirigée par \textbf{Reouven SAMAMA}, dans le 11\textsuperscript{e} à Paris. On y développe surtout des outils pour le tourisme et le voyage d'affaires ; TourCom est un client important (réseau d'agences), et il y a aussi «~Agence et Vous~», branché sur les ERP des agences. Au quotidien, une bonne partie du travail consiste à digérer des protocoles transport et à garder des temps de réponse acceptables quand plusieurs fournisseurs répondent en parallèle --- ce qui n'est pas toujours le cas.
 
 \begin{figure}[H]
 \centering
 \includegraphics[height=1.2cm]{assets/logo_everbloo.png}
-\caption{Identité visuelle de l'entreprise d'accueil SAS Everbloo}
+\caption{Logo Everbloo}
 \label{fig:logo_everbloo}
 \end{figure}
 
-L'entreprise travaille notamment avec le réseau d'agences indépendantes \textbf{TourCom}, qui rassemble plus de 1\,200 points de vente en France. Everbloo édite aussi l'outil «~Agence et Vous~», un carnet de voyage connecté aux logiciels de gestion (ERP) des agences. Le quotidien chez Everbloo demande une grande réactivité technique, une bonne maîtrise des protocoles de transport (aérien et train) et la capacité à gérer des flux de données volumineux sans ralentir les utilisateurs.
+\section{La plateforme Metis}
 
-\section{La Plateforme Metis et son Écosystème}
-
-Le cœur de mon travail a porté sur la plateforme \textbf{Metis} (\textit{Metis Digital}). Il s'agit d'un moteur de distribution aérienne B2B et d'un outil d'auto-réservation d'entreprise (\textit{Self-Booking Tool} ou SBT), utilisé au quotidien par des agents de voyages, des billettistes et des gestionnaires de voyages d'affaires.
+C'est sur \textbf{Metis} que j'ai passé l'essentiel du temps. Les agents, billettistes et travel managers s'en servent pour chercher et émettre. Le projet associe Everbloo et Metis Digital (\textbf{Jérôme BENBIHI}, \textbf{Bernard MOLLE}, \textbf{David MARCIANO}). Environ une centaine d'agences l'utilisent.
 
 \begin{figure}[H]
 \centering
 \includegraphics[height=1.2cm]{assets/logo_metis.png}
-\caption{Plateforme logicielle Metis Digital dédiée à la distribution B2B}
+\caption{Logo Metis}
 \label{fig:logo_metis}
 \end{figure}
 
-Le projet associe l'équipe technique d'Everbloo et les fondateurs de Metis Digital : \textbf{Jérôme BENBIHI}, \textbf{Bernard MOLLE} (qui apporte plus de trente ans d'expérience dans l'univers des GDS) et \textbf{David MARCIANO} (spécialiste du voyage d'affaires). Aujourd'hui, Metis est utilisé par près d'une centaine d'agences de voyages en France et à l'international.
+Concrètement, mon travail touchait surtout la recherche multi-fournisseurs, les politiques de voyage, les changements de prix au checkout et le lien avec la comptabilité agence (segments passifs).
 
-Concrètement, la plateforme doit remplir plusieurs missions : interroger plusieurs fournisseurs de vols en parallèle pour comparer les prix, appliquer les politiques de voyage de chaque entreprise (plafonds budgétaires, confort de cabine), gérer les changements de prix de dernière minute et créer automatiquement les dossiers comptables dans les systèmes de gestion des agences.
+\section{Organisation de l'équipe}
 
-\section{Organisation de l'Équipe et Quotidien de Développement}
+Sprints de deux semaines, daily, démos. \textbf{Reouven SAMAMA} arbitre avec Metis Digital sur les priorités. Les PO (\textbf{Steeven ALIEL}, \textbf{Brenda SECK}, \textbf{Véronique DANG}) écrivent les tickets Jira et valident. Côté code : moi, \textbf{Jiong Jiong LIN}, et des développeurs en Tunisie. Les MR passent par GitLab / GitHub.
 
-Nous fonctionnons en méthodologie Agile Scrum, avec des sprints de deux semaines, des points d'équipe quotidiens (\textit{daily stand-ups}) et des démonstrations régulières.
+\subsection{Mon rôle}
 
-La direction générale et technique est assurée par \textbf{Reouven SAMAMA} avec les dirigeants de Metis Digital, qui fixent les priorités commerciales et valident les choix d'architecture majeurs.
+J'ai fait à la fois de l'architecture (adaptateurs Sabre/NDC) et du développement (\texttt{api-aerial}, \texttt{front-reservation}, un peu \texttt{front-dashboard}). Typage TypeScript, tests, et beaucoup de temps sur les incidents remontés par le support.
 
-Le pôle produit compte trois Product Owners (\textbf{Steeven ALIEL}, \textbf{Brenda SECK}, \textbf{Véronique DANG}). Ils rédigent les spécifications fonctionnelles sur Jira, gèrent le backlog et testent les fonctionnalités livrées. Les échanges entre les développeurs et les PO sont constants pour ajuster les besoins métiers aux contraintes des API des compagnies.
-
-L'équipe technique réunit \textbf{Jérémy SOLER} (Apprenti Architecte SI), \textbf{Jiong Jiong LIN} (développeur full-stack référent) et des développeurs basés en Tunisie. Nous faisons des revues de code systématiques sur GitLab et GitHub et du pair programming sur les parties les plus sensibles pour maintenir la qualité du code.
-
-\subsection{Mon Rôle et Mon Périmètre d'Intervention}
-
-En tant qu'Apprenti Architecte Systèmes d'Information, mon travail a combiné les choix d'architecture logicielle et le développement full-stack au quotidien. J'ai conçu la couche d'adaptateurs pour faire dialoguer Sabre et les API NDC, développé l'API backend Node.js (\texttt{api-aerial}) et construit les interfaces en Nuxt~3 / Vue~3 (\texttt{front-reservation}, \texttt{front-dashboard}). J'ai aussi mis en place le typage TypeScript strict, rédigé les tests automatisés et participé au diagnostic des incidents de production avec le support agences.
-
-Sur l'ensemble de ces 38 mois, mes contributions représentent \textbf{1~554 commits}, avec \textbf{+595~310 lignes de code ajoutées}, \textbf{-402~680 lignes supprimées ou refactorisées} et \textbf{1~869 fichiers modifiés}.
+Sur la durée : 1\,554 commits, +595\,310 / $-$402\,680 lignes, 1\,869 fichiers touchés.
 
 \begin{figure}[H]
 \centering
@@ -62,7 +52,6 @@ Sur l'ensemble de ces 38 mois, mes contributions représentent \textbf{1~554 com
     arrowline/.style={->, >=stealth, draw=DarkSlate!60, line width=0.8pt}
 ]
 
-% 1. Direction Everbloo et Metis
 \node[boxdir] (dir) {
     \textbf{Reouven SAMAMA}\\[1pt]
     \scriptsize\textcolor{DarkSlate}{Fondateur \& CEO Everbloo · Tech Lead}
@@ -73,13 +62,11 @@ Sur l'ensemble de ces 38 mois, mes contributions représentent \textbf{1~554 com
     \scriptsize\textcolor{DarkSlate}{Direction Métier Metis Digital}
 };
 
-% 2. Product Management
 \node[boxpo, below=0.8cm of dir, xshift=3.0cm] (po) {
     \textbf{S. Aliel · B. Seck · V. Dang}\\[1pt]
-    \scriptsize\textcolor{DarkSlate}{Pôle Product Owners \& Spécifications B2B}
+    \scriptsize\textcolor{DarkSlate}{Product Owners}
 };
 
-% 3. Équipe Technique & Architecture
 \node[boxdev1, below left=0.9cm and -0.8cm of po] (dev1) {
     \textbf{Jérémy SOLER}\\[1pt]
     \scriptsize\textcolor{DarkSlate}{Apprenti Architecte SI}
@@ -95,7 +82,6 @@ Sur l'ensemble de ces 38 mois, mes contributions représentent \textbf{1~554 com
     \scriptsize\textcolor{DarkSlate}{Développeurs (Tunisie)}
 };
 
-% Liaisons
 \draw[arrowline] (dir.south) -- ++(0,-0.35) -| (po.north);
 \draw[arrowline] (metis.south) -- ++(0,-0.35) -| (po.north);
 \draw[arrowline] (po.south) -- ++(0,-0.35) -| (dev1.north);
@@ -103,28 +89,22 @@ Sur l'ensemble de ces 38 mois, mes contributions représentent \textbf{1~554 com
 \draw[arrowline] (po.south) -- ++(0,-0.35) -| (dev3.north);
 
 \end{tikzpicture}
-\caption{Organigramme structurel et opérationnel de l'équipe projet distribuée}
+\caption{Équipe projet}
 \label{fig:organigramme}
 \end{figure}
 
-\chapter{Environnement Technologique et Architecture de la Plateforme Metis}
+\chapter{Stack et architecture Metis}
 \label{chap:techno_metis}
 
-\section{Stack Technologique et Environnement de Développement}
+\section{Stack et environnement de développement}
 
-La stack technique de Metis a été choisie pour allier performance transactionnelle, réactivité côté client et maintenabilité à long terme.
+Le backend tourne sous Node.js / Express. Sequelize gère MySQL et PostgreSQL, avec des migrations versionnées --- on a les deux bases parce que le métier aérien et le back-office n'ont pas suivi le même historique. L'auth passe par Keycloak (OpenID Connect, JWT). Les fronts sont en Nuxt~3 / Vue~3 (Composition API), Vuetify~3, Pinia, typés en TypeScript.
 
-Côté serveur, l'environnement d'exécution repose sur Node.js et Express.js. Le modèle d'entrées/sorties non bloquant de l'écosystème Node est particulièrement adapté aux appels asynchrones concurrents vers les multiples API de distribution aérienne. La persistance des données relationnelles est assurée par l'ORM Sequelize sur des bases MySQL et PostgreSQL, avec des migrations versionnées. L'authentification et les habilitations s'appuient sur Keycloak via le protocole OpenID Connect et des tokens JWT.
+En local, Devenv (Nix) et Pixi figent les versions Node et la compilation de modules natifs (\texttt{bcrypt}, \texttt{libxmljs}), ce qui évite surtout les divergences Windows / Linux sur \texttt{libxmljs}. Concurrently lance les services ensemble. Les tests utilisent Mocha / Chai et Playwright.
 
-Côté client, l'architecture utilise Nuxt~3 et Vue~3 (Composition API). Le typage TypeScript strict est appliqué sur l'ensemble des dépôts frontend et backend pour sécuriser les structures de données. L'interface utilisateur repose sur Vuetify~3, et la gestion d'état centralisée (panier, passagers, filtres) est confiée à des stores Pinia.
+\section{Découpage des services}
 
-Pour le développement local, nous utilisons \textbf{Devenv} (basé sur le gestionnaire de paquets Nix) et \textbf{Pixi} pour garantir des environnements de travail reproductibles d'un poste à l'autre, verrouiller les versions binaires de Node.js et gérer la compilation de modules C++ comme \texttt{bcrypt} et \texttt{libxmljs}. L'exécution conjointe des services et micro-frontends en local est gérée par \textbf{Concurrently}.
-
-L'assurance qualité intègre des tests unitaires et d'intégration avec \textbf{Mocha} et \textbf{Chai} pour valider la réconciliation des passagers et les calculs de prix, ainsi que des tests de bout en bout avec \textbf{Playwright} pour simuler les parcours d'achat complets.
-
-\section{Architecture Modulaire et Découpage des Services}
-
-La plateforme Metis adopte une architecture orientée services (SOA) qui dissocie nettement les traitements de réservation à haute fréquence des fonctions d'administration commerciale de back-office. Le tableau \ref{tab:repartition_composants} présente la répartition des responsabilités techniques ainsi que la distribution de mes contributions sur les quatre composants du monorepo.
+Le moteur de réservation et le back-office sont séparés. Le tableau \ref{tab:repartition_composants} donne la répartition de mes commits.
 
 \begin{table}[H]
 \centering
@@ -134,15 +114,15 @@ La plateforme Metis adopte une architecture orientée services (SOA) qui dissoci
 \begin{tabularx}{\textwidth}{>{\columncolor{CobaltBlue!5}\bfseries}l p{3.2cm} X r}
 \hline
 \rowcolor{CobaltBlue!12}
-\textbf{\color{NavyBlue}Composant} & \textbf{\color{NavyBlue}Type Applicatif} & \textbf{\color{NavyBlue}Rôle Fonctionnel \& Technique} & \textbf{\color{NavyBlue}Part Commits} \\
+\textbf{\color{NavyBlue}Composant} & \textbf{\color{NavyBlue}Type} & \textbf{\color{NavyBlue}Rôle} & \textbf{\color{NavyBlue}Commits} \\
 \hline
-\texttt{api-aerial} & Backend Node.js & Moteur de distribution aérienne, agrégation Sabre / Amadeus / NDC, calcul tarifaire, PNR. & \textbf{64.2\%} (997) \\
-\texttt{front-reservation} & Frontend Nuxt 3 & Interface SBT / B2B, moteur de recherche, comparateur, flux de retarification et checkout. & \textbf{33.5\%} (520) \\
-\texttt{front-dashboard} & Frontend Nuxt 3 & Back-office agence, gestion des points de vente (POS), profils Sabre et segments passifs. & \textbf{2.1\%} (33) \\
-\texttt{api-dashboard} & Backend Node.js & Gestion des habilitations, profils marchands et devises agences. & \textbf{0.3\%} (4) \\
+\texttt{api-aerial} & Backend Node.js & Agrégation Sabre / Amadeus / NDC, tarifs, PNR. & \textbf{64.2\%} (997) \\
+\texttt{front-reservation} & Frontend Nuxt 3 & Recherche, panier, retarification, checkout. & \textbf{33.5\%} (520) \\
+\texttt{front-dashboard} & Frontend Nuxt 3 & POS, profils Sabre, segments passifs. & \textbf{2.1\%} (33) \\
+\texttt{api-dashboard} & Backend Node.js & Habilitations, devises agences. & \textbf{0.3\%} (4) \\
 \hline
 \end{tabularx}
-\caption{Répartition des composants du monorepo Metis et volume de contributions}
+\caption{Monorepo Metis --- commits}
 \label{tab:repartition_composants}
 \end{table}
 
@@ -157,7 +137,6 @@ La plateforme Metis adopte une architecture orientée services (SOA) qui dissoci
     arrowline/.style={->, >=stealth, draw=DarkSlate!40, line width=0.8pt}
 ]
 
-% 1. Couche Frontend
 \node[boxfront] (front_res) {
     \textbf{\texttt{front-reservation}}\\[1pt]
     \scriptsize\textcolor{DarkSlate}{Nuxt 3 · Client SBT \& B2B}
@@ -168,7 +147,6 @@ La plateforme Metis adopte une architecture orientée services (SOA) qui dissoci
     \scriptsize\textcolor{DarkSlate}{Nuxt 3 · Back-office Agence}
 };
 
-% 2. Couche Backend
 \node[boxback, below=1.0cm of front_res] (api_aerial) {
     \textbf{\texttt{api-aerial}}\\[1pt]
     \scriptsize\textcolor{DarkSlate}{Node.js · Moteur Aérien \& NDC}
@@ -179,7 +157,6 @@ La plateforme Metis adopte une architecture orientée services (SOA) qui dissoci
     \scriptsize\textcolor{DarkSlate}{Node.js · Administration \& Auth}
 };
 
-% 3. Couche Fournisseurs
 \node[boxprov, below=1.0cm of api_aerial, xshift=-1.8cm] (sabre) {
     \textbf{Sabre GDS / NDC}\\[1pt]
     \scriptsize\textcolor{DarkSlate}{SOAP \& REST}
@@ -195,7 +172,6 @@ La plateforme Metis adopte une architecture orientée services (SOA) qui dissoci
     \scriptsize\textcolor{DarkSlate}{IATA XML \& JSON}
 };
 
-% Liaisons
 \draw[arrowline] (front_res.south) -- node[right=2pt, font=\tiny\color{DarkSlate}] {HTTPS} (api_aerial.north);
 \draw[arrowline] (front_dash.south) -- node[right=2pt, font=\tiny\color{DarkSlate}] {HTTPS} (api_dash.north);
 
@@ -204,15 +180,10 @@ La plateforme Metis adopte une architecture orientée services (SOA) qui dissoci
 \draw[arrowline] (api_aerial.south) -- (ndc.north);
 
 \end{tikzpicture}
-\caption{Architecture des services et flux de données de la plateforme Metis}
+\caption{Services Metis et fournisseurs}
 \label{fig:architecture_metis}
 \end{figure}
 
-\section{Transition vers la Problématique}
+\section{Passage à la problématique}
 
-En production, l'orchestration de ces différentes couches soulève des difficultés concrètes. Lorsqu'un utilisateur lance une recherche, \texttt{api-aerial} sollicite en parallèle Sabre et plusieurs passerelles NDC. Sabre répond généralement en 800 à 1\,200\,ms via SOAP, tandis que certaines API NDC directes mettent entre 3 et 6 secondes à renvoyer leurs flux XML.
-
-Au-delà de ces écarts de latence, la principale fragilité apparaît lors de la validation du panier. L'offre sélectionnée peut avoir expiré auprès de la compagnie, ou son montant peut avoir varié de quelques euros suite au recalcul des taxes. Si le système ne prend pas en compte cette variation de manière fluide, la réservation échoue et l'utilisateur doit recommencer sa saisie. Enfin, la synchronisation comptable par segments passifs et la gestion des devises multiples imposent une gestion rigoureuse des flux pour éviter tout litige financier aux agences partenaires.
-
-Ces contraintes réelles forment le socle de la problématique et des hypothèses de travail présentées dans le chapitre suivant.
-
+Sabre répond souvent en 800--1\,200\,ms ; certaines API NDC mettent 3--6\,s, et ce n'est pas stable d'une heure à l'autre. Au checkout, l'offre peut être expirée ou repricée. Les segments passifs et le multi-devises ajoutent un risque ADM qui n'apparaît parfois que des semaines plus tard, quand le transporteur audit le dossier.
